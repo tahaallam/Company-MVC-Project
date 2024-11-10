@@ -1,0 +1,51 @@
+﻿
+@model EmployeeViewModel
+
+@if (Model.ImageName is not null)
+{
+    <div>
+        <img src="~/Files/Images/@Model.ImageName" class="rounded" height="50" width="50" />
+        <input asp-for="ImageName") hidden />
+    </div>
+}
+
+<div>
+    <label class="col-form-label" asp-for="Name"></label>
+    <input readonly class="form-control" asp-for="Name" />
+
+</div>
+<div>
+    <label class="col-form-label" asp-for="Address"></label>
+    <input readonly class="form-control" asp-for="Address" />
+
+</div>
+<div>
+    <label class="col-form-label" asp-for="Age"></label>
+    <input readonly class="form-control" asp-for="Age" />
+
+</div>
+<div>
+    <label class="col-form-label" asp-for="PhoneNumber"></label>
+    <input readonly class="form-control" asp-for="PhoneNumber" />
+
+</div>
+<div>
+    <label class="col-form-label" asp-for="Email"></label>
+    <input readonly class="form-control" asp-for="Email" />
+
+</div>
+<div>
+    <label class="col-form-label" asp-for="Salary"></label>
+    <input readonly class="form-control" asp-for="Salary" />
+
+</div>
+<div>
+    <label class="col-form-label" asp-for="HireDate"></label>
+    <input readonly class="form-control" asp-for="HireDate" />
+
+</div>
+ <div>
+        <label class="col-form-label" asp-for="IsActive"></label>
+        <input readonly class="form-check-input mt-6" style="height:30px ; width:30px;" type="checkbox" value="" id="flexCheckDefault" asp-for="IsActive" />
+
+    </div>

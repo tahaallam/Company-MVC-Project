@@ -1,0 +1,33 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit @Model.FName @Model.LName Data</h1>
+
+<div asp-validation-summary="All"></div>
+
+<form asp-action="Edit">
+    <input asp-for="Email" hidden />
+    <input asp-for="Roles" hidden />
+    <div>
+        <label class="col-form-label" asp-for="FName"></label>
+        <input class="form-control" asp-for="FName" />
+        <span asp-validation-for="FName" class="text-danger"></span>
+    </div>
+    <div>
+        <label class="col-form-label" asp-for="LName"></label>
+        <input class="form-control" asp-for="LName" />
+        <span asp-validation-for="LName" class="text-danger"></span>
+    </div>
+    <div>
+        <label class="col-form-label" asp-for="PhoneNUmber"></label>
+        <input class="form-control" asp-for="PhoneNUmber" />
+        <span asp-validation-for="PhoneNUmber" class="text-danger"></span>
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+@section ValidationScriptSection {
+    <partial name="_ValidationScriptPartial" />
+}
